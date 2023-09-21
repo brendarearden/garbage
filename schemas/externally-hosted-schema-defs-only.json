@@ -5,7 +5,15 @@
   "type": "object",
   "$defs": {
     "Name": {
-      "$ref": "#/$defs/PropertyType"
+      "additionalProperties": {
+        "$ref": "#/$defs/PropertyType"
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      }
     },
     "PropertyType": {
       "type": "string"
