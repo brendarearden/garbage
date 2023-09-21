@@ -1,0 +1,29 @@
+openapi: 3.0.0
+info:
+  title: example external schema
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  '/users/{userId}':
+    parameters:
+      - schema:
+          type: integer
+        name: userId
+        in: path
+        required: true
+        description: Id of an existing user.
+    get:
+      summary: Get User Info by User ID
+      tags: []
+      responses:
+        '200':
+          description: User Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+components:
+  schemas:
+    User:
+      $ref: 'https://raw.githubusercontent.com/brendarearden/garbage/main/schemas/externally-hosted-schema-defs-only.json#/definitions/Name'
