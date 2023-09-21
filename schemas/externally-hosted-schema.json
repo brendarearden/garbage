@@ -1,25 +1,17 @@
 {
+  "$id": "https://example.com/person.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/invopop/jsonschema_test/sample-user",
-  "$defs": {
-    "SampleUser": {
-      "properties": {
-        "id": {
-          "type": "integer"
-        },
-        "name": {
-          "type": "string",
-          "title": "the name",
-          "description": "The name of a friend",
-          "default": "alex"
-        }
-      },
-      "additionalProperties": {
-        "$ref": "#/definitions/PropertyType"
-      },
-      "type": "object",
-      "required": ["id", "name"]
+  "title": "Person",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
     },
+    "name": {
+      "$ref": "#/$defs/PropertyType"
+    }
+  },
+  "$defs": {
     "PropertyType": {
       "type": "string"
     }
