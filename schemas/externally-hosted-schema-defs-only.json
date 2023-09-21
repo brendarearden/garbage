@@ -6,7 +6,7 @@
   "definitions": {
     "Name": {
       "additionalProperties": {
-        "$ref": "#/$defs/PropertyType"
+        "$ref": "#/definitions/PropertyType"
       },
       "type": "object",
       "properties": {
