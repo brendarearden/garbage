@@ -1,0 +1,31 @@
+openapi: 3.1.0
+info:
+  title: Test
+  version: version
+paths:
+  /operation:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                AAAAA:
+                  $ref: "#/components/schemas/Referenced"
+                  description: AAAAA
+                  examples:
+                    - AAAAA
+                BBBBB:
+                  $ref: "#/components/schemas/Referenced"
+                  description: BBBBB
+                  examples:
+                    - BBBBB
+components:
+  schemas:
+    Referenced:
+      description: AAAAA
+      examples:
+        - AAAAA
+      title: referenced
+      type: string
