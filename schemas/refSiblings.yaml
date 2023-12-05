@@ -12,12 +12,14 @@ paths:
               type: object
               properties:
                 AAAAA:
-                  $ref: 'https://raw.githubusercontent.com/brendarearden/garbage/main/schemas/referenced.yaml',
+                  $ref: >-
+                    https://raw.githubusercontent.com/brendarearden/garbage/main/schemas/referenced.yaml
                   description: AAAAA
                   examples:
                     - AAAAA
                 BBBBB:
-                  $ref: 'https://raw.githubusercontent.com/brendarearden/garbage/main/schemas/referenced.yaml',
+                  $ref: >-
+                    https://raw.githubusercontent.com/brendarearden/garbage/main/schemas/referenced.yaml
                   description: BBBBB
                   examples:
                     - BBBBB
