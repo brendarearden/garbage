@@ -1,0 +1,15 @@
+referenced: { type: string }
+object:
+  allOf:
+    - type: object
+      properties:
+        AAAAA:
+          allOf:
+            - $ref: "#/referenced"
+              description: AAAAA
+            - examples: [AAAAA]
+        BBBBB:
+          allOf:
+            - $ref: "#/referenced"
+              description: BBBBB
+            - examples: [BBBBB]
