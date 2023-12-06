@@ -1,0 +1,19 @@
+paths:
+  /operation:
+    post:
+      summary: operation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              {
+                $ref: "https://raw.githubusercontent.com/brendarearden/garbage/main/schemas/differentRefSiblingsReference.yaml#/object",
+              }
+      operationId: operationId
+      security: []
+servers: [url: "http://example.com"]
+openapi: 3.1.0
+info:
+  title: Test
+  version: version
